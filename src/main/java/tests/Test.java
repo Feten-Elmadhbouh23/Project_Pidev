@@ -2,27 +2,30 @@ package tests;
 
 import BD.MyDataBase;
 import Models.Vehicule;
-import Models.Zone_liv;
 import services.VehiculeServices;
 import services.zone_livServices;
 
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
 
 public class Test {
+    private static Connection connection;
+
     public Test() {}
     public static void main (String[]args) {
         MyDataBase bd = MyDataBase.getInstance();
         VehiculeServices vs = new VehiculeServices();
         zone_livServices zs = new zone_livServices();
+
         try {
-          Vehicule newVehicule = new Vehicule("Moto");
-          vs.ajouter(newVehicule);
-          System.out.println("Vehicule added successfully.");
+            Vehicule newVehicule = new Vehicule("Moto");
+            vs.ajouter(newVehicule);
+            System.out.println("Vehicule added successfully.");
         } catch (SQLException e) {
-          throw new RuntimeException(e);
-         }
+            throw new RuntimeException(e);
+        }
         try {
             vs.modifier(new Vehicule("vehicule "));
             System.out.println("Vehicule modifiée!!!");
@@ -36,7 +39,7 @@ public class Test {
             System.out.println(e.getMessage());
         }
         try {
-            List<Vehicule> vehicule = vs.afficher() ;
+            List<Vehicule> vehicule = vs.afficher();
             for (Vehicule v : vehicule) {
                 System.out.println("ID : " + v.getId() + ", Type : " + v.getType());
             }
@@ -60,6 +63,5 @@ public class Test {
             System.out.println("Erreur lors de l'affichage des zones : " + e.getMessage());
         }
     }*/
-
-
-}}
+    }
+    }

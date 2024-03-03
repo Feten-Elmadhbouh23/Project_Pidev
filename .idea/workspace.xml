@@ -5,38 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16121f42-9d0f-4545-b47a-62c42f104cfc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/BD/MyDataBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Vehicule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Zone_liv.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/G_Véhicules.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/Homepage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/MODV.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ZoneLiv.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/IService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/IZliv.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/VehiculeServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/zone_livServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tests/Mainfx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tests/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/G_véhicules.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Homepage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Image/carte-des-epingles.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Image/gestion.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Image/livreur.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Image/map.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Image/verifier.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/MODV.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Zone_liv.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/commande_client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/Adresses.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ListCommandes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ModifierVehicule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Adresses.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/List_commandes.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ModifierVehicule.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/G_Véhicules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/G_Véhicules.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Homepage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/MODV.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ZoneLiv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ZoneLiv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/VehiculeServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/VehiculeServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Homepage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Homepage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/MODV.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Zone_liv.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Zone_liv.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +36,8 @@
       <list>
         <option value="Interface" />
         <option value="CSS File" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -77,31 +62,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Test [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.livraison [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/Desktop/pidev/Test/src/main/resources/Image&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Test.executor": "Run",
+    "Maven.Test [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
+    "Maven.livraison [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/DELL/Desktop/pidev/livraison",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\DELL\Desktop\pidev\Test\src\main\resources\Image" />
@@ -138,7 +123,16 @@
       <workItem from="1708980559424" duration="982000" />
       <workItem from="1708981685142" duration="215000" />
       <workItem from="1709027174922" duration="1036000" />
-      <workItem from="1709032391467" duration="1064000" />
+      <workItem from="1709032391467" duration="2282000" />
+      <workItem from="1709037226401" duration="734000" />
+      <workItem from="1709038646871" duration="3472000" />
+      <workItem from="1709044601493" duration="849000" />
+      <workItem from="1709114643216" duration="16933000" />
+      <workItem from="1709137798954" duration="956000" />
+      <workItem from="1709149090323" duration="8651000" />
+      <workItem from="1709203071138" duration="7104000" />
+      <workItem from="1709303180571" duration="19000" />
+      <workItem from="1709456176697" duration="2861000" />
     </task>
     <servers />
   </component>

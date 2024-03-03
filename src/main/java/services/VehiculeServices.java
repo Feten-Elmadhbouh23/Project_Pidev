@@ -32,7 +32,7 @@ public class VehiculeServices implements IService<Vehicule> {
                 }
             }
         } else {
-            // Si le type de véhicule est vide, afficher un message d'erreur
+
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Erreur");
             alert.setHeaderText(null);
@@ -57,13 +57,32 @@ public class VehiculeServices implements IService<Vehicule> {
 
     @Override
     public void modifier(Vehicule vehicule) throws SQLException {
-        String req = "UPDATE vehicule SET type = ? WHERE id = ?";
-        try (PreparedStatement pst = connection.prepareStatement(req)) {
-            pst.setString(1, vehicule.getType());
-            pst.setInt(2, vehicule.getId());
-            pst.executeUpdate();
-        }
+        if (vehicule.getType() != null && !vehicule.getType().isEmpty()) {
+            if (existeDeja(vehicule)) {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Véhicule déjà existant");
+                alert.setHeaderText(null);
+                alert.setContentText("Le véhicule " + vehicule.getType() + " existe déjà dans la base de données. Veuillez changer le type ou retourner à la page précédente.");
+                alert.showAndWait();
+            } else {
+                String req = "UPDATE vehicule SET type = ? WHERE id = ?";
+                try (PreparedStatement pst = connection.prepareStatement(req)) {
+                    pst.setString(1, vehicule.getType());
+                    pst.setInt(2, vehicule.getId());
+                    pst.executeUpdate();
+                }
+
+            }
+        }else {
+
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Erreur");
+                alert.setHeaderText(null);
+                alert.setContentText("Le type de véhicule ne peut pas être vide.");
+                alert.showAndWait();
+            }
     }
+
 
     @Override
     public void supprimer(int id) throws SQLException {
