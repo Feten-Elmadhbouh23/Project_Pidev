@@ -5,9 +5,6 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
-
-import Models.Vehicule;
-import Models.Zone_liv;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -19,10 +16,8 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-import services.VehiculeServices;
+import Models.Zone_liv;
 import services.zone_livServices;
-
-import javax.security.auth.callback.Callback;
 
 public class ZoneLiv {
 
@@ -40,6 +35,7 @@ public class ZoneLiv {
 
     @FXML
     private TableColumn<Zone_liv, Integer> idCol;
+
     @FXML
     private TableColumn<Zone_liv, String> typeCol;
 
@@ -56,12 +52,11 @@ public class ZoneLiv {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
 
     @FXML
     void initialize() {
+        assert affichez != null : "fx:id=\"affichez\" was not injected: check your FXML file 'Zone_liv.fxml'.";
         idCol.setCellValueFactory(new PropertyValueFactory<>("id"));
         typeCol.setCellValueFactory(new PropertyValueFactory<>("zone"));
         zone_livServices ZS = new zone_livServices();
@@ -105,6 +100,26 @@ public class ZoneLiv {
     }
 
     private void handlechoiceAction(Zone_liv zone_liv) {
-        affichez.setText(zone_liv.getZone());
+        if (affichez != null) {
+            affichez.setText(zone_liv.getZone());
+            sendZoneToAdresses(zone_liv.getZone());
+        } else {
+            System.err.println("affichez is null");
+        }
+    }
+
+    private void sendZoneToAdresses(String zone) {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Adresses.fxml"));
+        try {
+            Parent root = loader.load();
+            Adresses controller = loader.getController();
+            controller.receiveZone(zone);
+
+            Stage newStage = new Stage();
+            newStage.setScene(new Scene(root));
+            newStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

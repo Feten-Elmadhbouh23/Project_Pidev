@@ -69,6 +69,7 @@ public class G_Véhicules {
             alert.setTitle("Champ vide");
             alert.setContentText("Veuillez saisir un type de véhicule.");
             alert.showAndWait();
+
             return;
         } else if (!typesAcceptes.contains(typeVehicule)) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -96,6 +97,7 @@ public class G_Véhicules {
 
 
     }
+
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////
     @FXML
@@ -151,6 +153,7 @@ public class G_Véhicules {
         if (alert.getResult() == ButtonType.YES) {
             try {
                 VS.supprimer(vehicule.getId());
+                vtab.getItems().remove(vehicule);
                 vtab.refresh();
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -161,9 +164,10 @@ public class G_Véhicules {
 
     private void handleModifyAction(Vehicule vehicule) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/MODV.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/ModifierVehicule.fxml"));
+
             Parent root = loader.load();
-            MODV controller = loader.getController();
+            ModifierVehicule controller = loader.getController();
             controller.setType(vehicule.getType());
             controller.setUpdateAction(event -> {
                 String newType = controller.getType();
