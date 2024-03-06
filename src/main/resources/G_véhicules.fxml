@@ -10,35 +10,33 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="474.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.G_Véhicules">
+<AnchorPane prefHeight="385.0" prefWidth="682.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.G_Véhicules">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#82c3ff" height="48.0" layoutY="-2.0" stroke="WHITE" strokeType="INSIDE" width="665.0" />
-      <HBox layoutX="218.0" layoutY="88.0">
-         <children>
-            <TableView fx:id="vtab" prefHeight="350.0" prefWidth="446.0">
-               <columns>
-                  <TableColumn fx:id="idCol" prefWidth="67.19993591308594" text="ID" />
-                  <TableColumn fx:id="typeCol" prefWidth="167.20001220703125" text="Type" />
-                  <TableColumn fx:id="columnActions" prefWidth="212.7999267578125" text="Actions" />
-               </columns>
-            </TableView>
-         </children>
-      </HBox>
-      <Text layoutX="14.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter un  véhicule" wrappingWidth="317.60000000000014">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7ea8cf" height="401.0" layoutX="-2.0" stroke="WHITE" strokeType="INSIDE" width="682.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fafafa" height="58.0" layoutX="-1.0" layoutY="76.0" stroke="WHITE" strokeType="INSIDE" width="682.0" />
+      <HBox layoutX="218.0" layoutY="88.0" />
+      <Text layoutX="46.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter un  véhicule :" wrappingWidth="182.39999999999998">
          <font>
-            <Font name="Ebrima" size="19.0" />
+            <Font name="Arial" size="19.0" />
          </font>
       </Text>
-      <TextField fx:id="TypeV" layoutX="14.0" layoutY="113.0" prefHeight="34.0" prefWidth="182.0" />
-      <Button layoutX="13.0" layoutY="156.0" mnemonicParsing="false" onAction="#okaddVehicule" prefHeight="26.0" prefWidth="182.0" style="-fx-background-color: #1e87fd; -fx-text-fill:white;" text="Ajouter">
+      <TextField fx:id="TypeV" layoutX="238.0" layoutY="88.0" prefHeight="34.0" prefWidth="182.0" />
+      <Button layoutX="447.0" layoutY="88.0" mnemonicParsing="false" onAction="#okaddVehicule" prefHeight="34.0" prefWidth="182.0" style="-fx-background-color: #ffffff; -fx-text-fill:#1d6483;" text="Ajouter">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
-      <Button layoutX="14.0" layoutY="435.0" mnemonicParsing="false" onAction="#Retourbu" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: #1e87fd; -fx-text-fill:white;" text="Retour" />
-      <Text layoutX="12.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des  véhicules" wrappingWidth="366.93670654296875">
+      <Button layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#Retourbu" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: #ffffff; -fx-text-fill:#1d6483;" text="Retour" />
+      <Text layoutX="7.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des  véhicules" wrappingWidth="366.93670654296875">
          <font>
             <Font name="System Bold Italic" size="27.0" />
          </font>
       </Text>
+      <TableView fx:id="vtab" layoutX="120.0" layoutY="166.0" prefHeight="208.0" prefWidth="462.0">
+         <columns>
+            <TableColumn fx:id="idCol" prefWidth="67.19993591308594" text="ID" />
+            <TableColumn fx:id="typeCol" prefWidth="188.00001525878906" text="Type" />
+            <TableColumn fx:id="columnActions" prefWidth="206.4000244140625" text="Actions" />
+         </columns>
+      </TableView>
    </children>
 </AnchorPane>

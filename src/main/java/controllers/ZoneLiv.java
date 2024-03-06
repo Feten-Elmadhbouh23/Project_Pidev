@@ -112,7 +112,8 @@ public class ZoneLiv {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Adresses.fxml"));
         try {
             Parent root = loader.load();
-            Adresses controller = loader.getController();
+            Adresses controller;
+            controller = loader.getController();
             controller.receiveZone(zone);
 
             Stage newStage = new Stage();

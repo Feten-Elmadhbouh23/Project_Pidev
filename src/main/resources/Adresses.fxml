@@ -9,36 +9,36 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
+<AnchorPane prefHeight="608.0" prefWidth="929.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Adresses">
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7ea8cf" height="563.0" layoutX="-15.0" layoutY="44.0" stroke="WHITE" strokeType="INSIDE" width="944.0" />
+        <TextField fx:id="affichez" editable="false" layoutX="354.0" layoutY="62.0" prefHeight="30.0" prefWidth="150.0" />
+        <TableView fx:id="tableViewClients" layoutX="39.0" layoutY="124.0">
+            <columns>
+                <TableColumn fx:id="columnId" prefWidth="50.0" text="ID" />
+                <TableColumn fx:id="columnNom" prefWidth="100.0" text="Nom" />
+                <TableColumn fx:id="columnPrenom" prefWidth="100.0" text="Prenom" />
+                <TableColumn fx:id="columnEmail" prefWidth="150.0" text="Email" />
+                <TableColumn fx:id="columnUsername" prefWidth="100.0" text="Username" />
+                <TableColumn fx:id="columnAdresse" prefWidth="114.4000244140625" text="Adresse" />
+                <TableColumn fx:id="columnNumTel" prefWidth="98.39990234375" text="Num Tel" />
+                <TableColumn fx:id="columnActions" prefWidth="137.60009765625" text="Actions">
+                </TableColumn>
+            </columns>
+        </TableView>
 
-<AnchorPane prefHeight="437.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Adresses">
-   <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#82c3ff" height="48.0" layoutX="-3.0" stroke="WHITE" strokeType="INSIDE" width="723.0" />
-      <TextField fx:id="affichez" editable="false" layoutX="14.0" layoutY="84.0" prefHeight="30.0" prefWidth="150.0" />
-      <Text layoutX="14.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zone ">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Text>
-      <TableView fx:id="livr" layoutX="14.0" layoutY="167.0" prefHeight="202.0" prefWidth="614.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="nom" />
-            <TableColumn prefWidth="75.0" text="premon" />
-            <TableColumn prefWidth="115.19999694824219" text="adresse" />
-            <TableColumn prefWidth="92.800048828125" text="id_commande" />
-            <TableColumn prefWidth="82.4000244140625" text="num_tel" />
-        </columns>
-      </TableView>
-      <Text layoutX="14.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="les client dans cette zone : ">
-         <font>
-            <Font size="22.0" />
-         </font>
-      </Text>
-      <Button layoutX="6.0" layoutY="383.0" mnemonicParsing="false" onAction="#RetourG" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: #1e87fd; -fx-text-fill:white;" text="Retour" />
-      <Text layoutX="14.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" livraison">
-         <font>
-            <Font name="System Bold Italic" size="35.0" />
-         </font>
-      </Text>
-      <Button layoutX="584.0" layoutY="383.0" mnemonicParsing="false" onAction="#ok" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #1e87fd; -fx-text-fill:white;" text="ok" />
-   </children>
+        <Text layoutX="14.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consulter la zone de livraison" wrappingWidth="319.63592529296875">
+            <font>
+                <Font name="Arial" size="24.0" />
+            </font>
+        </Text>
+        <Button layoutX="7.0" layoutY="557.0" mnemonicParsing="false" onAction="#RetourG" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: #ffffff; -fx-text-fill:#1d6483;" text="Retour" />
+        <Text layoutX="7.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" livraison">
+            <font>
+                <Font name="System Bold Italic" size="35.0" />
+            </font>
+        </Text>
+        <Button layoutX="815.0" layoutY="570.0" mnemonicParsing="false" onAction="#ok" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #ffffff; -fx-text-fill:#1d6483;" text="ok" />
+
+    </children>
 </AnchorPane>

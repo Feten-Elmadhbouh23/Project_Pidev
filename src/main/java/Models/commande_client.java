@@ -1,21 +1,16 @@
+// commande_client.java
 package Models;
 
 public class commande_client {
     private int id;
     private int id_plat;
     private int id_commande;
-    private int prix;
+    private double prix;
     private int quantite;
     private int date;
     private String status;
 
-    public commande_client(int id_plat, int id_commande, int prix, int quantite, int date, String status) {
-        this.id_plat = id_plat;
-        this.id_commande = id_commande;
-        this.prix = prix;
-        this.quantite = quantite;
-        this.date = date;
-        this.status = status;
+    public commande_client() {
     }
 
     public int getId() {
@@ -42,11 +37,11 @@ public class commande_client {
         this.id_commande = id_commande;
     }
 
-    public int getPrix() {
+    public double getPrix() {
         return prix;
     }
 
-    public void setPrix(int prix) {
+    public void setPrix(double prix) {
         this.prix = prix;
     }
 
