@@ -14,7 +14,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import Models.Zone_liv;
 import services.zone_livServices;
@@ -71,7 +70,7 @@ public class ZoneLiv {
         }
         addChoiceButtonsToTable();
     }
-
+    @FXML
     private void addChoiceButtonsToTable() {
         TableColumn<Zone_liv, Void> colBtn = new TableColumn<>("Choisir");
 
@@ -98,7 +97,7 @@ public class ZoneLiv {
 
         Ztab.getColumns().add(colBtn);
     }
-
+    @FXML
     private void handlechoiceAction(Zone_liv zone_liv) {
         if (affichez != null) {
             affichez.setText(zone_liv.getZone());
@@ -107,7 +106,7 @@ public class ZoneLiv {
             System.err.println("affichez is null");
         }
     }
-
+    @FXML
     private void sendZoneToAdresses(String zone) {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Adresses.fxml"));
         try {

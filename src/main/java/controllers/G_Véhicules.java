@@ -161,7 +161,7 @@ public class G_Véhicules {
         }
     }
 
-
+    @FXML
     private void handleModifyAction(Vehicule vehicule) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/ModifierVehicule.fxml"));

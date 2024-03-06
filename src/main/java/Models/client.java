@@ -23,19 +23,6 @@ public class client {
         this.numTel = numTel;
 
     }
-
-    public client(String nom, String prenom, String email, String password, String username, String adresse, int numTel ) {
-        this.nom = nom;
-        this.prenom = prenom;
-        this.email = email;
-        this.password = password;
-        this.username = username;
-        this.adresse = adresse;
-        this.numTel = numTel;
-
-
-    }
-
     public int getId() {
         return id;
     }

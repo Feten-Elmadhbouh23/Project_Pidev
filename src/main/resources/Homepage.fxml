@@ -13,7 +13,7 @@
 
 <AnchorPane prefHeight="445.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Homepage">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7ea8cf" height="446.0" layoutX="-5.0" stroke="WHITE" strokeType="INSIDE" width="751.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7ea8cf" height="496.0" layoutX="-5.0" stroke="WHITE" strokeType="INSIDE" width="952.0" />
       <Circle fill="WHITE" layoutX="61.0" layoutY="58.0" radius="58.0" stroke="#7394a9" strokeType="INSIDE" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="282.0" layoutX="317.0" layoutY="120.0" stroke="WHITE" strokeType="INSIDE" width="187.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="282.0" layoutX="107.0" layoutY="120.0" stroke="WHITE" strokeType="INSIDE" width="187.0" />
@@ -55,5 +55,11 @@
          </font>
       </Button>
       <Button layoutX="14.0" layoutY="407.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="73.0" text="Logout" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="282.0" layoutX="739.0" layoutY="120.0" stroke="WHITE" strokeType="INSIDE" width="187.0" />
+      <Button layoutX="752.0" layoutY="130.0" mnemonicParsing="false" onAction="#handelcommande_client" prefHeight="70.0" prefWidth="161.0" style="-fx-background-color: #248cbb; -fx-text-fill:white;" text="Commande client">
+         <font>
+            <Font name="Ebrima Bold" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
