@@ -1,7 +1,9 @@
-// commande_clientserves.java
 package services;
 
+import BD.MyDataBase;
+import Models.client;
 import Models.commande_client;
+import services.IZliv;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -10,17 +12,22 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class commande_clientserves {
+public class commande_clientserves implements IZliv<commande_client> {
     private Connection connection;
 
-    public commande_clientserves(Connection connection) {
-        this.connection = connection;
+    public commande_clientserves() {
+        this.connection = MyDataBase.getInstance().getconn();
     }
-
+    @Override
     public void ajouter(commande_client commandeClient) throws SQLException {
-        // Code pour ajouter une commande client dans la base de données
+        String query = String.format("INSERT INTO commande_client (id_plat, id_commande, prix, quantite, status, date) VALUES (%d, %d, %f, %d, '%s', '%s')",
+                commandeClient.getId_plat(), commandeClient.getId_commande(), commandeClient.getPrix(), commandeClient.getQuantite(),
+                commandeClient.getStatus(), commandeClient.getDate());
+        try (Statement statement = connection.createStatement()) {
+            statement.executeUpdate(query);
+        }
     }
-
+    @Override
     public List<commande_client> afficher() throws SQLException {
         String req = "SELECT * FROM commande_client";
         List<commande_client> commandes = new ArrayList<>();
@@ -34,7 +41,7 @@ public class commande_clientserves {
                 commande.setId_commande(rs.getInt("id_commande"));
                 commande.setPrix(rs.getDouble("prix"));
                 commande.setQuantite(rs.getInt("quantite"));
-                commande.setDate(rs.getInt("date"));
+                commande.setDate(rs.getDate("date"));
                 commande.setStatus(rs.getString("status"));
 
                 commandes.add(commande);

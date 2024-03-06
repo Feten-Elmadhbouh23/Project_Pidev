@@ -14,15 +14,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
-import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
 public class ContactClient {
 
     @FXML
@@ -32,37 +30,106 @@ public class ContactClient {
     private URL location;
 
     @FXML
-    private TableColumn<?, ?> columnActions;
+    private TableColumn<client, Integer> columnId;
 
     @FXML
-    private TableColumn<?, ?> columnAdresse;
+    private TableColumn<client, String> columnNom;
 
     @FXML
-    private TableColumn<?, ?> columnEmail;
+    private TableColumn<client, String> columnPrenom;
 
     @FXML
-    private TableColumn<?, ?> columnId;
+    private TableColumn<client, String> columnEmail;
 
     @FXML
-    private TableColumn<?, ?> columnNom;
+    private TableColumn<client, String> columnUsername;
 
     @FXML
-    private TableColumn<?, ?> columnNumTel;
+    private TableColumn<client, String> columnAdresse;
 
     @FXML
-    private TableColumn<?, ?> columnPrenom;
-
-    @FXML
-    private TableColumn<?, ?> columnUsername;
+    private TableColumn<client, String> columnNumTel;
 
     @FXML
     private TableView<client> tableViewClients;
+
+    private final String ACCOUNT_SID = "AC82754c7e6f5661b5f635d204f0a3db7a";
+    private final String AUTH_TOKEN = "4e39646026a5bc38523283642aca1ee5";
+    private final String FROM_NUMBER = "+12346010049";
+
+    private services.ClientService clientService;
+    private ComboBox<Object> columnActions;
+
     @FXML
-    private services.ClientService ClientService;
-    private final String ACCOUNT_SID = "Votre_SID_de_compte_Twilio";
-    private final String AUTH_TOKEN = "Votre_token_d'authentification_Twilio";
-    private final String FROM_NUMBER = "Votre_numéro_Twilio";
-    //////////////////////////////////////////////////////////////////////////////////////
+    void initialize() {
+        assert columnId != null : "fx:id=\"columnId\" was not injected: check your FXML file 'ContactClient.fxml'.";
+        assert columnNom != null : "fx:id=\"columnNom\" was not injected: check your FXML file 'ContactClient.fxml'.";
+        assert columnPrenom != null : "fx:id=\"columnPrenom\" was not injected: check your FXML file 'ContactClient.fxml'.";
+        assert columnEmail != null : "fx:id=\"columnEmail\" was not injected: check your FXML file 'ContactClient.fxml'.";
+        assert columnUsername != null : "fx:id=\"columnUsername\" was not injected: check your FXML file 'ContactClient.fxml'.";
+        assert columnAdresse != null : "fx:id=\"columnAdresse\" was not injected: check your FXML file 'ContactClient.fxml'.";
+        assert columnNumTel != null : "fx:id=\"columnNumTel\" was not injected: check your FXML file 'ContactClient.fxml'.";
+        assert tableViewClients != null : "fx:id=\"tableViewClients\" was not injected: check your FXML file 'ContactClient.fxml'.";
+
+        clientService = new services.ClientService();
+        setupTableColumns();
+        loadClientsData();
+    }
+
+    private void setupTableColumns() {
+        columnId.setCellValueFactory(new PropertyValueFactory<>("id"));
+        columnNom.setCellValueFactory(new PropertyValueFactory<>("nom"));
+        columnPrenom.setCellValueFactory(new PropertyValueFactory<>("prenom"));
+        columnEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
+        columnUsername.setCellValueFactory(new PropertyValueFactory<>("username"));
+        columnAdresse.setCellValueFactory(new PropertyValueFactory<>("adresse"));
+        columnNumTel.setCellValueFactory(new PropertyValueFactory<>("numTel"));
+//        columnActions.setCellFactory(param -> new ListCell<Object>() {
+//            final Button btnCan = new Button("Contacter");
+//
+//            {
+//                btnCan.setOnAction(event -> {
+//                    client selectedClient = tableViewClients.getItems().get(getIndex());
+//                    sendDeliveryMessage(selectedClient);
+//                });
+//            }
+//
+//            @Override
+//            protected void updateItem(Object item, boolean empty) {
+//                super.updateItem(item, empty);
+//                if (empty || item == null) {
+//                    setGraphic(null);
+//                } else {
+//                    setGraphic(btnCan);
+//                }
+//            }
+//        });
+
+    }
+
+    private void loadClientsData() {
+        try {
+            List<client> clientsList = clientService.afficher();
+            ObservableList<client> observableList = FXCollections.observableArrayList(clientsList);
+            tableViewClients.setItems(observableList);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            afficherAlerte("Erreur lors du chargement des données clients.");
+        }
+    }
+
+//    @FXML
+//    void sendDeliveryMessage(client selectedClient) {
+//        if (selectedClient != null) {
+//            String messageBody = "Bonjour " + selectedClient.getPrenom() + ", votre livraison est en route. Merci de votre confiance!";
+//            Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+//            String clientPhoneNumber = String.valueOf(selectedClient.getNumTel());
+//            Message message = Message.creator(new PhoneNumber(clientPhoneNumber), new PhoneNumber(FROM_NUMBER), messageBody).create();
+//            afficherAlerte("Message envoyé avec succès au client " + selectedClient.getPrenom());
+//        } else {
+//            afficherAlerte("Veuillez sélectionner un client pour envoyer un message.");
+//        }
+//    }
     @FXML
     void ok(ActionEvent event) {
         Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
@@ -75,57 +142,16 @@ public class ContactClient {
             newStage.show();
         } catch (IOException e) {
             e.printStackTrace();
+            afficherAlerte("Erreur lors de l'ouverture de la page d'accueil.");
         }
     }
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-
-
-
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////
     @FXML
-    void initialize() {
-        assert columnActions != null : "fx:id=\"columnActions\" was not injected: check your FXML file 'ContactClient.fxml'.";
-        assert columnAdresse != null : "fx:id=\"columnAdresse\" was not injected: check your FXML file 'ContactClient.fxml'.";
-        assert columnEmail != null : "fx:id=\"columnEmail\" was not injected: check your FXML file 'ContactClient.fxml'.";
-        assert columnId != null : "fx:id=\"columnId\" was not injected: check your FXML file 'ContactClient.fxml'.";
-        assert columnNom != null : "fx:id=\"columnNom\" was not injected: check your FXML file 'ContactClient.fxml'.";
-        assert columnNumTel != null : "fx:id=\"columnNumTel\" was not injected: check your FXML file 'ContactClient.fxml'.";
-        assert columnPrenom != null : "fx:id=\"columnPrenom\" was not injected: check your FXML file 'ContactClient.fxml'.";
-        assert columnUsername != null : "fx:id=\"columnUsername\" was not injected: check your FXML file 'ContactClient.fxml'.";
-        assert tableViewClients != null : "fx:id=\"tableViewClients\" was not injected: check your FXML file 'ContactClient.fxml'.";
-        ClientService = new services.ClientService();
-        setupTableColumns();
-        loadClientsData();
-    }
-    private void setupTableColumns() {
-        columnId.setCellValueFactory(new PropertyValueFactory<>("id"));
-        columnNom.setCellValueFactory(new PropertyValueFactory<>("nom"));
-        columnPrenom.setCellValueFactory(new PropertyValueFactory<>("prenom"));
-        columnEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
-        columnUsername.setCellValueFactory(new PropertyValueFactory<>("username"));
-        columnAdresse.setCellValueFactory(new PropertyValueFactory<>("adresse"));
-        columnNumTel.setCellValueFactory(new PropertyValueFactory<>("numTel"));
-}
-    private void loadClientsData() {
-        try {
-            List<client> clientsList = ClientService.afficher();
-            ObservableList<client> observableList = FXCollections.observableArrayList(clientsList);
-            tableViewClients.setItems(observableList);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
     private void afficherAlerte(String message) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Erreur");
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Information");
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
     }
-
-
-
 }

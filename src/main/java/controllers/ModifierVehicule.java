@@ -56,7 +56,7 @@ public class ModifierVehicule {
     ///////////////////////////////////////////////////////////////////////////////////////////////////////
     public void setType(String type) {Type.setText(type);
     }
-
+    @FXML
     public void setUpdateAction(EventHandler<ActionEvent> eventHandler) {
         butonM.setOnAction(eventHandler);
     }

@@ -1,21 +1,17 @@
 package controllers;
 import javafx.fxml.FXML;
-
 import java.io.IOException;
-import java.net.URL;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class Homepage {
 
     @FXML
     void Gestion_véhicules(ActionEvent event) {
-        navigateTo("/G_véhicules.fxml", event);
+        navigateTo ("/G_véhicules.fxml", event);
     }
     @FXML
     public void handleContactClient(ActionEvent event) {
@@ -27,6 +23,8 @@ public class Homepage {
         navigateTo("/Zone_liv.fxml", event);
     }
 
+    public void handelcommande_client(ActionEvent event) {navigateTo("/commande_client.fxml", event);
+    }
     private void navigateTo(String fxmlPath, ActionEvent event) {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
         try {
@@ -45,6 +43,7 @@ public class Homepage {
     void initialize() {
 
     }
+
 
 
 

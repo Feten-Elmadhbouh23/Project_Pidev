@@ -5,27 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16121f42-9d0f-4545-b47a-62c42f104cfc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ContactClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/MapViewWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/ClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/commande_clientserves.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ContactClient.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/MapViewWindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/CommandeClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/commande_client.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Models/commande_client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/commande_client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Adresses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Adresses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ContactClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ContactClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/G_Véhicules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/G_Véhicules.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Homepage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ListCommandes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ModifierVehicule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ModifierVehicule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ZoneLiv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ZoneLiv.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tests/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Adresses.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Adresses.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/G_véhicules.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/G_véhicules.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/commande_clientserves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/commande_clientserves.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Homepage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Homepage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/List_commandes.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ModifierVehicule.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ModifierVehicule.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Zone_liv.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Zone_liv.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +33,9 @@
         <option value="Interface" />
         <option value="CSS File" />
         <option value="HTML File" />
-        <option value="Class" />
         <option value="JavaFXApplication" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -147,6 +139,9 @@
       <workItem from="1709579317895" duration="7117000" />
       <workItem from="1709629696478" duration="34187000" />
       <workItem from="1709716517406" duration="3065000" />
+      <workItem from="1709719679084" duration="433000" />
+      <workItem from="1709721989016" duration="14659000" />
+      <workItem from="1709750156078" duration="245000" />
     </task>
     <servers />
   </component>

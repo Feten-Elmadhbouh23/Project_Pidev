@@ -1,5 +1,7 @@
-// commande_client.java
+
 package Models;
+
+import java.sql.Date;
 
 public class commande_client {
     private int id;
@@ -7,8 +9,18 @@ public class commande_client {
     private int id_commande;
     private double prix;
     private int quantite;
-    private int date;
+    private Date date;
     private String status;
+
+    public commande_client(int id, int id_plat, int id_commande, double prix, int quantite, Date date, String status) {
+        this.id = id;
+        this.id_plat = id_plat;
+        this.id_commande = id_commande;
+        this.prix = prix;
+        this.quantite = quantite;
+        this.date = date;
+        this.status = status;
+    }
 
     public commande_client() {
     }
@@ -53,11 +65,11 @@ public class commande_client {
         this.quantite = quantite;
     }
 
-    public int getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(int date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
@@ -68,4 +80,6 @@ public class commande_client {
     public void setStatus(String status) {
         this.status = status;
     }
+
 }
+
