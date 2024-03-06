@@ -7,18 +7,23 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="157.0" prefWidth="284.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ModifierVehicule">
+<AnchorPane prefHeight="198.0" prefWidth="363.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ModifierVehicule">
    <children>
-      <TextField fx:id="Type" layoutX="64.0" layoutY="48.0" prefHeight="36.0" prefWidth="161.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8bc7ff" height="36.0" layoutY="-4.0" stroke="WHITE" strokeType="INSIDE" width="284.0" />
-      <Text layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saisir nouveau type" textAlignment="CENTER" wrappingWidth="262.1367492675781">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7ea8cf" height="199.0" layoutX="1.0" stroke="WHITE" strokeType="INSIDE" width="361.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="62.0" layoutX="1.0" layoutY="64.0" stroke="WHITE" strokeType="INSIDE" width="361.0" />
+      <TextField fx:id="Type" layoutX="119.0" layoutY="77.0" prefHeight="36.0" prefWidth="161.0" />
+      <Text layoutX="-76.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nouveau type :" textAlignment="CENTER" wrappingWidth="262.1367492675781">
          <font>
-            <Font name="Ebrima" size="24.0" />
+            <Font name="Bell MT Bold" size="16.0" />
          </font>
       </Text>
 
-      <Button layoutX="21.0" layoutY="114.0" mnemonicParsing="false" onAction="#Retourbu" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: #1e87fd; -fx-text-fill:white;" text="Retour" />
-      <Button fx:id="butonM" layoutX="194.0" layoutY="111.0" mnemonicParsing="false" onAction="#ModifierV" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: #1e87fd; -fx-text-fill:white;" text="Modifier" />
+      <Button layoutX="14.0" layoutY="153.0" mnemonicParsing="false" onAction="#Retourbu" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: #ffffff; -fx-text-fill:#1d6483;" text="Retour" />
+      <Button fx:id="butonM" layoutX="271.0" layoutY="153.0" mnemonicParsing="false" onAction="#ModifierV" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: #ffffff; -fx-text-fill:#1d6483;" text="Modifier" />
+      <Text layoutX="119.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifier" wrappingWidth="194.13672637939453">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

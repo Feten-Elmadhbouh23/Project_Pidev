@@ -1,4 +1,5 @@
 package controllers;
+import javafx.fxml.FXML;
 
 import java.io.IOException;
 import java.net.URL;
@@ -13,19 +14,12 @@ import javafx.stage.Stage;
 public class Homepage {
 
     @FXML
-    private TextField nomliv;
-
-    @FXML
-    private TextField prenomliv;
-
-    @FXML
     void Gestion_véhicules(ActionEvent event) {
         navigateTo("/G_véhicules.fxml", event);
     }
-
     @FXML
-    void Liste_commandes(ActionEvent event) {
-        navigateTo("/List_commandes.fxml", event);
+    public void handleContactClient(ActionEvent event) {
+        navigateTo("/ContactClient.fxml",event );
     }
 
     @FXML
@@ -49,8 +43,10 @@ public class Homepage {
 
     @FXML
     void initialize() {
-        assert nomliv != null : "fx:id=\"nomliv\" was not injected: check your FXML file 'Homepage.fxml'.";
-        assert prenomliv != null : "fx:id=\"prenomliv\" was not injected: check your FXML file 'Homepage.fxml'.";
+
     }
+
+
+
 }
 

@@ -4,44 +4,28 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="394.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ZoneLiv">
+<AnchorPane prefHeight="438.0" prefWidth="462.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ZoneLiv">
    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7ea8cf" height="446.0" layoutX="-4.0" layoutY="-6.0" stroke="WHITE" strokeType="INSIDE" width="484.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="439.0" layoutX="86.0" stroke="WHITE" strokeType="INSIDE" width="349.0" />
       <Text layoutX="88.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#82c3ff" height="48.0" layoutY="-10.0" stroke="WHITE" strokeType="INSIDE" width="666.0" />
-      <TableView fx:id="Ztab" layoutX="17.0" layoutY="48.0" prefHeight="258.0" prefWidth="418.0">
+      <TableView fx:id="Ztab" layoutX="93.0" layoutY="90.0" prefHeight="258.0" prefWidth="336.0">
          <columns>
             <TableColumn fx:id="idCol" prefWidth="77.59997940063477" text="ID" />
             <TableColumn fx:id="typeCol" prefWidth="156.0" text="zone" />
          </columns>
       </TableView>
-      <Text layoutX="21.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="zone de livraison" wrappingWidth="366.93670654296875">
+      <Text layoutX="111.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="zone de livraison" wrappingWidth="321.336669921875">
          <font>
             <Font name="System Bold Italic" size="27.0" />
          </font>
       </Text>
-      <HBox layoutX="451.0" layoutY="132.0" prefHeight="134.0" prefWidth="161.0">
-         <children>
-            <ImageView fitHeight="134.0" fitWidth="166.0">
-               <image>
-                  <Image url="@Image/map.jpg" />
-               </image>
-            </ImageView>
-         </children>
-      </HBox>
-      <Text layoutX="457.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="la zone que vous avez choisi est :" wrappingWidth="188.0">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
-      <Button layoutX="17.0" layoutY="352.0" mnemonicParsing="false" onAction="#RetourG" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: #1e87fd; -fx-text-fill:white;" text="Retour" />
-      <TextField fx:id="affichez" editable="false" layoutX="459.0" layoutY="275.0" prefHeight="30.0" prefWidth="150.0" />
+      <Button layoutX="9.0" layoutY="405.0" mnemonicParsing="false" onAction="#RetourG" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: #ffffff; -fx-text-fill:#1d6483;" text="Retour" />
+      <TextField fx:id="affichez" editable="false" layoutX="142.0" layoutY="374.0" prefHeight="30.0" prefWidth="150.0" />
    </children>
 </AnchorPane>
