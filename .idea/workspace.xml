@@ -5,24 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16121f42-9d0f-4545-b47a-62c42f104cfc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/CommandeClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/commande_client.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/back.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BD/MyDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BD/MyDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Zone_liv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Zone_liv.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Models/client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/commande_client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/commande_client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ContactClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ContactClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Adresses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Adresses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/CommandeClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/CommandeClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ContactClient.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/G_Véhicules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/G_Véhicules.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Homepage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ModifierVehicule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ModifierVehicule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ZoneLiv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ZoneLiv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ClientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/commande_clientserves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/commande_clientserves.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Adresses.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Adresses.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ContactClient.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/G_véhicules.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/G_véhicules.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Homepage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Homepage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ModifierVehicule.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ModifierVehicule.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Zone_liv.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Zone_liv.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/commande_client.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/commande_client.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="ExportToHTMLSettings">
     <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../Test\exportToHTML" />
@@ -31,11 +41,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaFXApplication" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -45,10 +55,11 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe" />
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -76,7 +87,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/Desktop/pidev/Smartech-main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/Desktop/pidev/livraison&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -98,7 +109,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
       </set>
     </attachedChunks>
   </component>
@@ -141,7 +153,29 @@
       <workItem from="1709716517406" duration="3065000" />
       <workItem from="1709719679084" duration="433000" />
       <workItem from="1709721989016" duration="14659000" />
-      <workItem from="1709750156078" duration="245000" />
+      <workItem from="1709750156078" duration="763000" />
+      <workItem from="1709754920104" duration="896000" />
+      <workItem from="1709807393221" duration="2830000" />
+      <workItem from="1711285908252" duration="904000" />
+      <workItem from="1711579992558" duration="4977000" />
+      <workItem from="1711639422145" duration="2423000" />
+      <workItem from="1712313334290" duration="615000" />
+      <workItem from="1712739088784" duration="643000" />
+      <workItem from="1713346065351" duration="947000" />
+      <workItem from="1713352916407" duration="551000" />
+      <workItem from="1715871985845" duration="115000" />
+      <workItem from="1715874081746" duration="494000" />
+      <workItem from="1715874597895" duration="1187000" />
+      <workItem from="1715950041984" duration="800000" />
+      <workItem from="1717248324428" duration="1754000" />
+      <workItem from="1717251410965" duration="37000" />
+      <workItem from="1717252250246" duration="19000" />
+      <workItem from="1717252840867" duration="14000" />
+      <workItem from="1717254177540" duration="540000" />
+      <workItem from="1717255112196" duration="29000" />
+      <workItem from="1717255979183" duration="16955000" />
+      <workItem from="1717323335266" duration="5548000" />
+      <workItem from="1717332551306" duration="608000" />
     </task>
     <servers />
   </component>

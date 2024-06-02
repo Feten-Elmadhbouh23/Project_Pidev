@@ -8,19 +8,27 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import Models.Vehicule;
+
+import controllers.ModifierVehicule;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.skin.TableColumnHeader;
+import javafx.scene.control.skin.TableViewSkin;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 import services.VehiculeServices;
-
+import javafx.scene.control.Hyperlink;
+import javafx.scene.layout.AnchorPane;
 public class G_Véhicules {
 
     @FXML
@@ -41,8 +49,12 @@ public class G_Véhicules {
 
     @FXML
     private TableView<Vehicule> vtab;
+    @FXML
+    private AnchorPane mainAnchorPane;
 
-    //////////////////////////////////////////////////////////////////////////////////////////////////////
+    @FXML
+    private Hyperlink AccueilLink;
+
     @FXML
     void Retourbu(ActionEvent event) {
         Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
@@ -58,11 +70,12 @@ public class G_Véhicules {
         }
     }
 
+
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     @FXML
     void okaddVehicule(ActionEvent event) {
         String typeVehicule = TypeV.getText().trim();
-        List<String> typesAcceptes = Arrays.asList("Fourgon", "Voiture", "Scooter", "Vélo", "Moto");
+        List<String> typesAcceptes = Arrays.asList("Fourgon", "Voiture", "Scooter", "Velo", "Moto");
 
         if (typeVehicule.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -94,16 +107,19 @@ public class G_Véhicules {
             alert.setContentText(e.getMessage());
             alert.showAndWait();
         }
-
-
     }
 
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////
     @FXML
     void initialize() {
+
+
+
+
         idCol.setCellValueFactory(new PropertyValueFactory<>("id"));
         typeCol.setCellValueFactory(new PropertyValueFactory<>("type"));
+
 
         VehiculeServices VS = new VehiculeServices();
 
@@ -192,15 +208,4 @@ public class G_Véhicules {
             e.printStackTrace();
         }
     }
-
 }
-
-
-
-
-
-
-
-
-
-

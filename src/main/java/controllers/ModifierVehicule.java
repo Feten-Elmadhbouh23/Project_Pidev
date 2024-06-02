@@ -39,20 +39,7 @@ public class ModifierVehicule {
     private String newType;
 
 
-    @FXML
-    void Retourbu(ActionEvent event) {
-        Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("/G_véhicules.fxml"));
-            Stage newStage = new Stage();
-            newStage.setScene(new Scene(root));
-            Stage currentStage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-            currentStage.close();
-            newStage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+
     ///////////////////////////////////////////////////////////////////////////////////////////////////////
     public void setType(String type) {Type.setText(type);
     }

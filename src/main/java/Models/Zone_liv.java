@@ -30,5 +30,3 @@ public class Zone_liv {
         this.zone = zone;
     }
 }
-
-

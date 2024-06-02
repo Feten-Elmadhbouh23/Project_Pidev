@@ -18,6 +18,15 @@ public class commande_clientserves implements IZliv<commande_client> {
     public commande_clientserves() {
         this.connection = MyDataBase.getInstance().getconn();
     }
+
+
+    public void supprimer(int idCommande) throws SQLException {
+        String query = String.format("DELETE FROM commande_client WHERE id_commande = %d", idCommande);
+        try (Statement statement = connection.createStatement()) {
+            statement.executeUpdate(query);
+        }
+    }
+
     @Override
     public void ajouter(commande_client commandeClient) throws SQLException {
         String query = String.format("INSERT INTO commande_client (id_plat, id_commande, prix, quantite, status, date) VALUES (%d, %d, %f, %d, '%s', '%s')",

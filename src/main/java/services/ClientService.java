@@ -125,4 +125,32 @@ public class ClientService implements IService<client> {
         }
         return false;
     }
+
+    ///////////////////////////////////////////////////////////////////////////////
+    public List<client> getClientsByZone(String zone) throws SQLException {
+        List<client> clients = new ArrayList<>();
+        String req = "SELECT * FROM client WHERE adresse LIKE ?";
+        try (PreparedStatement pst = connection.prepareStatement(req)) {
+            pst.setString(1, "%" + zone + "%");
+            try (ResultSet rs = pst.executeQuery()) {
+                while (rs.next()) {
+                    client client = new client(
+                            rs.getInt("id"),
+                            rs.getString("nom"),
+                            rs.getString("prenom"),
+                            rs.getString("email"),
+                            rs.getString("password"),
+                            rs.getString("username"),
+                            rs.getString("adresse"),
+                            rs.getInt("num_tel")
+                    );
+                    clients.add(client);
+                }
+            }
+        }
+        return clients;
+    }
+
+
+
 }
