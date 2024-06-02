@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16121f42-9d0f-4545-b47a-62c42f104cfc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/back.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BD/MyDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BD/MyDataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Zone_liv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Zone_liv.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Adresses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Adresses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/CommandeClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/CommandeClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ContactClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/G_Véhicules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/G_Véhicules.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Homepage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ModifierVehicule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ModifierVehicule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/commande_clientserves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/commande_clientserves.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Adresses.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Adresses.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ContactClient.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/G_véhicules.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/G_véhicules.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Homepage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Homepage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ModifierVehicule.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ModifierVehicule.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Zone_liv.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Zone_liv.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/commande_client.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/commande_client.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="16121f42-9d0f-4545-b47a-62c42f104cfc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -175,7 +154,7 @@
       <workItem from="1717255112196" duration="29000" />
       <workItem from="1717255979183" duration="16955000" />
       <workItem from="1717323335266" duration="5548000" />
-      <workItem from="1717332551306" duration="608000" />
+      <workItem from="1717332551306" duration="907000" />
     </task>
     <servers />
   </component>
