@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="666.0" prefWidth="918.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Livraison">
+   <ImageView fitHeight="669.0" fitWidth="935.0" layoutX="-7.0">
+      <image>
+         <Image url="@images/back.jpg" />
+      </image>
+   </ImageView>
+   <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffffff" height="542.0" layoutX="12.0" layoutY="98.0" stroke="#ddd" strokeType="INSIDE" width="902.0" />
+    <VBox alignment="TOP_CENTER" layoutX="27.0" layoutY="180.0" prefHeight="358.0" prefWidth="886.0">
+        <TableView fx:id="livreurTable" prefHeight="70.0" prefWidth="846.0">
+            <columns>
+                <TableColumn fx:id="nomLivreurColumn" prefWidth="379.20002442598343" text="Nom du livreur">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="nom" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="prenomLivreurColumn" prefWidth="418.3999328613281" text="Prénom du livreur">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="prenom" />
+                    </cellValueFactory>
+                </TableColumn>
+                <!-- Ajoutez d'autres colonnes au besoin -->
+            </columns>
+        </TableView>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <TableView fx:id="tableView" prefHeight="100.0" prefWidth="922.0">
+               <columns>
+                  <TableColumn fx:id="nomColumn" text="Nom" />
+                  <TableColumn fx:id="prenomColumn" text="Prénom" />
+                  <TableColumn fx:id="emailColumn" text="Email" />
+                  <TableColumn fx:id="adresseColumn" prefWidth="95.20001220703125" text="Adresse" />
+                  <TableColumn fx:id="numTelColumn" prefWidth="156.0" text="Numéro de téléphone" />
+                  <TableColumn prefWidth="132.0" text="Véhicule de livraison" />
+                  <TableColumn prefWidth="75.0" text="Date" />
+                  <TableColumn prefWidth="75.0" text="Prix" />
+                  <TableColumn prefWidth="111.19998779296873" text="Type de paiement" />
+               </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" />
+        <Button fx:id="showRouteButton" onAction="#showRoute" text="Consulter Maps" />
+        <Button fx:id="sendStatusButton" onAction="#sendStatus" text="Envoyer le statut de la livraison" />
+    </VBox>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fffbe4" height="54.0" layoutX="-9.0" stroke="WHITE" strokeType="INSIDE" width="935.0" />
+   <Text fill="#0e5b20" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHOUBIKLOUBIK">
+      <font>
+         <Font name="System Bold" size="17.0" />
+      </font>
+   </Text>
+   <Hyperlink layoutX="742.0" layoutY="19.0" onAction="#RetourG" style="-fx-text-fill: #0e5b20;" text="Accueil">
+      <font>
+         <Font name="System Italic" size="17.0" />
+      </font>
+   </Hyperlink>
+   <Hyperlink fx:id="logoutLink" layoutX="846.0" layoutY="19.0" style="-fx-text-fill: #0e5b20;" text="Logout">
+      <font>
+         <Font name="System Italic" size="17.0" />
+      </font>
+   </Hyperlink>
+   <Label layoutX="390.0" layoutY="137.0" styleClass="header" />
+   <Text fill="#0e5b20" layoutX="337.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Détails de la livraison">
+      <font>
+         <Font name="System Bold" size="23.0" />
+      </font>
+   </Text>
+</AnchorPane>

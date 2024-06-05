@@ -3,8 +3,8 @@ import java.util.Date;
 
 public class client {
     private int id;
-    private String nom;
-    private String prenom;
+    private static String nom;
+    private static String prenom;
     private String email;
     private String password;
     private String username;
@@ -31,7 +31,7 @@ public class client {
         this.id = id;
     }
 
-    public String getNom() {
+    public static String getNom() {
         return nom;
     }
 
@@ -39,7 +39,7 @@ public class client {
         this.nom = nom;
     }
 
-    public String getPrenom() {
+    public static String getPrenom() {
         return prenom;
     }
 

@@ -28,10 +28,6 @@ public class ZoneLiv {
 
     @FXML
     private TableView<Zone_liv> Ztab;
-
-    @FXML
-    private TextField affichez;
-
     @FXML
     private TableColumn<Zone_liv, Integer> idCol;
 
@@ -55,7 +51,6 @@ public class ZoneLiv {
 
     @FXML
     void initialize() {
-        assert affichez != null : "fx:id=\"affichez\" was not injected: check your FXML file 'Zone_liv.fxml'.";
         idCol.setCellValueFactory(new PropertyValueFactory<>("id"));
         typeCol.setCellValueFactory(new PropertyValueFactory<>("zone"));
         zone_livServices ZS = new zone_livServices();
@@ -70,6 +65,7 @@ public class ZoneLiv {
         }
         addChoiceButtonsToTable();
     }
+
     @FXML
     private void addChoiceButtonsToTable() {
         TableColumn<Zone_liv, Void> colBtn = new TableColumn<>("Choisir");
@@ -80,7 +76,7 @@ public class ZoneLiv {
             {
                 btn.setOnAction(event -> {
                     Zone_liv zone_liv = getTableView().getItems().get(getIndex());
-                    handlechoiceAction(zone_liv);
+                    handlechoiceAction(zone_liv.getId());
                 });
             }
 
@@ -97,27 +93,23 @@ public class ZoneLiv {
 
         Ztab.getColumns().add(colBtn);
     }
-    @FXML
-    private void handlechoiceAction(Zone_liv zone_liv) {
-        if (affichez != null) {
-            affichez.setText(zone_liv.getZone());
-            sendZoneToAdresses(zone_liv.getZone());
-        } else {
-            System.err.println("affichez is null");
-        }
-    }
-    @FXML
-    private void sendZoneToAdresses(String zone) {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Adresses.fxml"));
-        try {
-            Parent root = loader.load();
-            Adresses controller;
-            controller = loader.getController();
-            controller.receiveZone(zone);
 
-            Stage newStage = new Stage();
-            newStage.setScene(new Scene(root));
-            newStage.show();
+    @FXML
+    private void handlechoiceAction(int zoneId) {
+        sendZoneToAdresses(zoneId);
+    }
+
+    @FXML
+    private void sendZoneToAdresses(int zoneId) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Adresses.fxml"));
+            Parent root = loader.load();
+            Adresses controller = loader.getController();
+            controller.receiveZoneId(zoneId);
+
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }

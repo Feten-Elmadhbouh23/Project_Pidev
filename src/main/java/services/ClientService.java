@@ -127,11 +127,11 @@ public class ClientService implements IService<client> {
     }
 
     ///////////////////////////////////////////////////////////////////////////////
-    public List<client> getClientsByZone(String zone) throws SQLException {
+    public List<client> getClientsByZone(int zoneId) throws SQLException {
         List<client> clients = new ArrayList<>();
-        String req = "SELECT * FROM client WHERE adresse LIKE ?";
+        String req = "SELECT * FROM client WHERE adresse IN (SELECT zone FROM zone_liv WHERE id = ?)";
         try (PreparedStatement pst = connection.prepareStatement(req)) {
-            pst.setString(1, "%" + zone + "%");
+            pst.setInt(1, zoneId);
             try (ResultSet rs = pst.executeQuery()) {
                 while (rs.next()) {
                     client client = new client(
@@ -152,5 +152,17 @@ public class ClientService implements IService<client> {
     }
 
 
-
+    public String getZoneNameById(int selectedZoneId) throws SQLException {
+        String zoneName = null;
+        String req = "SELECT nom_zone FROM zones WHERE id_zone = ?";
+        try (PreparedStatement pst = connection.prepareStatement(req)) {
+            pst.setInt(1, selectedZoneId);
+            try (ResultSet rs = pst.executeQuery()) {
+                if (rs.next()) {
+                    zoneName = rs.getString("nom_zone");
+                }
+            }
+        }
+        return zoneName;
+    }
 }

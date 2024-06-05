@@ -6,44 +6,41 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="536.0" prefWidth="675.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ZoneLiv">
+<AnchorPane prefHeight="613.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Adresses">
     <children>
-        <ImageView fitHeight="510.0" fitWidth="826.0" layoutX="-77.0" layoutY="25.0">
+        <ImageView fitHeight="613.0" fitWidth="800.0">
             <image>
                 <Image url="@images/back.jpg" />
             </image>
         </ImageView>
-        <Text layoutX="88.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" /> <TableView fx:id="tableViewClients" layoutX="11.0" layoutY="80.0">
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffffff" height="497.0" layoutX="42.0" layoutY="88.0" stroke="#ddd" strokeType="INSIDE" width="683.0" />
+        <TableView fx:id="tableView" layoutX="65.0" layoutY="164.0" prefHeight="402.0" prefWidth="637.0">
             <columns>
-                <TableColumn fx:id="columnNom" prefWidth="100.0" text="Nom" />
-                <TableColumn fx:id="columnPrenom" prefWidth="100.0" text="Prenom" />
-                <TableColumn fx:id="columnEmail" prefWidth="150.0" text="Email" />
-                <TableColumn fx:id="columnAdresse" prefWidth="114.4000244140625" text="Adresse" />
-                <TableColumn fx:id="columnNumTel" prefWidth="98.39990234375" text="Num Tel" />
-                <TableColumn fx:id="columnActions" prefWidth="137.60009765625" text="Actions">
-                </TableColumn>
+                <TableColumn fx:id="nomColumn" text="Nom" />
+                <TableColumn fx:id="prenomColumn" text="Prénom" />
+                <TableColumn fx:id="emailColumn" text="Email" />
+                <TableColumn fx:id="adresseColumn" prefWidth="95.20001220703125" text="Adresse" />
+                <TableColumn fx:id="numTelColumn" prefWidth="156.0" text="Numéro de téléphone" />
+
             </columns>
         </TableView>
 
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fffbe4" height="54.0" layoutX="-1.0" layoutY="-10.0" stroke="WHITE" strokeType="INSIDE" width="750.0" />
-
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fffbe4" height="54.0" layoutX="-1.0" layoutY="-10.0" stroke="WHITE" strokeType="INSIDE" width="800.0" />
         <Text fill="#0e5b20" layoutX="11.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHOUBIKLOUBIK">
             <font>
                 <Font name="System Bold" size="17.0" />
             </font>
         </Text>
-        <HBox layoutX="750.0" layoutY="10.0" spacing="10" />
-        <Hyperlink layoutX="604.0" layoutY="8.0" onAction="#RetourG" style="-fx-text-fill: #0e5b20;" text="Accueil">
+        <Hyperlink layoutX="632.0" layoutY="7.0" onAction="#RetourG" style="-fx-text-fill: #0e5b20;" text="Accueil">
             <font>
                 <Font name="System Italic" size="17.0" />
             </font>
         </Hyperlink>
-        <Hyperlink fx:id="logoutLink" layoutX="677.0" layoutY="7.0" style="-fx-text-fill: #0e5b20;" text="logout">
+        <Hyperlink fx:id="logoutLink" layoutX="725.0" layoutY="7.0" style="-fx-text-fill: #0e5b20;" text="Logout">
             <font>
                 <Font name="System Italic" size="17.0" />
             </font>

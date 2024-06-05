@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16121f42-9d0f-4545-b47a-62c42f104cfc" name="Changes" comment="" />
+    <list default="true" id="16121f42-9d0f-4545-b47a-62c42f104cfc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Livreur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/Livraison.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/LivreurService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/livraison.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Adresses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Adresses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ZoneLiv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ZoneLiv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Adresses.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Adresses.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,9 +33,9 @@
         <option value="Interface" />
         <option value="HTML File" />
         <option value="JavaFXApplication" />
+        <option value="CSS File" />
         <option value="FxmlFile" />
         <option value="Class" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -58,6 +69,7 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Application.Test.executor&quot;: &quot;Run&quot;,
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Maven.Test [org.openjfx:javafx-maven-plugin:0.0.8:jlink].executor&quot;: &quot;Run&quot;,
     &quot;Maven.Test [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
     &quot;Maven.livraison [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -66,7 +78,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/Desktop/pidev/livraison&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/Desktop/pidev/Workshop-JDBC-JavaFX&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -154,12 +166,26 @@
       <workItem from="1717255112196" duration="29000" />
       <workItem from="1717255979183" duration="16955000" />
       <workItem from="1717323335266" duration="5548000" />
-      <workItem from="1717332551306" duration="907000" />
+      <workItem from="1717332551306" duration="5384000" />
+      <workItem from="1717584281671" duration="6661000" />
+      <workItem from="1717593404915" duration="6374000" />
+      <workItem from="1717610500562" duration="815000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
